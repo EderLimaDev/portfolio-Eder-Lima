@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open-sans', sans-serif;
+}
+
+@font-face {
+    font-family: 'Neue Machina';
+    src: url('../font/NeueMachina-Regular.otf');
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.main {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    border: 1px solid #fff;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
+}
