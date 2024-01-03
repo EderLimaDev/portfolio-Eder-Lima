@@ -9,7 +9,10 @@
 }
 
 body {
-    background-color: #000;
+    background-color: black;
+    background-image:url('../img/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
     color: #fff;
 }
 
