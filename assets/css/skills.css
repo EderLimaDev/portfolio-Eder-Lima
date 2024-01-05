@@ -20,23 +20,23 @@
 }
 
 .skills .personal ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .skills .personal ul li {
-    margin-left: 2rem;
-    padding: .5rem;
+   padding-bottom: .5rem;
 }
 
 @media screen and (min-width: 768px) {
     .skills {
         display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .skills .personal ul {
         grid-template-columns: 1fr 1fr;
     }
 

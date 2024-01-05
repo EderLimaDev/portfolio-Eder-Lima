@@ -27,6 +27,17 @@ function updateLanguagesSection(profileData) {
     .join(" ");
 }
 
+function updatePortfolioProjects(profileData) {
+  const projectsPortfolio = document.getElementById('portfolio-projects')
+  projectsPortfolio.innerHTML = profileData.portfolio.map((projects) => {
+    return `<li>
+    <h3 class="title github">${projects.name}</h3>
+    <a href="${projects.url}" target="_blank" >${projects.url}</a
+    >
+  </li>`
+  }).join(' ')
+}
+
 function updateProfessionalExperience(profileData) {
   const professionalExperience = document.getElementById("personal-experience");
   professionalExperience.innerHTML = profileData.professionalExperience.map(
@@ -40,9 +51,31 @@ function updateProfessionalExperience(profileData) {
     }).join(' ')
 }
 
+function updateSkillsSection(profileData) {
+  const profileSkillsTools = document.getElementById('profile-skills-tools')
+  profileSkillsTools.innerHTML = profileData.skills.hardSkills.map((hardSkill) => {
+    return `
+    <li><img src='${hardSkill.logo}' alt='${hardSkill.name} logo' /></li>
+    `
+  }).join(' ')
+
+  const personalSkills = document.getElementById('personal-profile-skills')
+  personalSkills.innerHTML = profileData.skills.softSkills.map((softSkill) => {
+    return `
+    <li>${softSkill}</li>`
+  }).join(' ')
+
+
+}
+
+
+
+
 (async () => {
   const profileData = await getProfileData();
   updateProfileData(profileData);
   updateLanguagesSection(profileData);
   updateProfessionalExperience(profileData);
+  updateSkillsSection(profileData);
+  updatePortfolioProjects(profileData);
 })();
