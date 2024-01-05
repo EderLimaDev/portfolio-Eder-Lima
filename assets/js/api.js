@@ -3,7 +3,7 @@
 
 
 async function getProfileData() {
-   const url = "https://raw.githubusercontent.com/EderLimaDev/portfolio-Eder-Lima/main/data/profile.json";
+   const url = "https://github.com/EderLimaDev/portfolio-Eder-Lima/blob/main/data/profile.json";
    const response = await fetch(url)
    const profileData = await response.json()
    return profileData
