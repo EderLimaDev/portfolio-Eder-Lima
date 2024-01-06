@@ -1,0 +1,9 @@
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer img {
+    max-width:100px;
+    cursor: pointer;
+}

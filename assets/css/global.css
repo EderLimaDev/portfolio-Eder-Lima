@@ -10,9 +10,6 @@
 
 body {
     background-color: black;
-    background-image:url('../img/background.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
     color: #fff;
 }
 
@@ -30,6 +27,30 @@ a:hover {
     margin: 1rem;
     border-radius: 1rem;
     border: 1px solid #fff;
+}
+
+.main::before,
+.main::after {
+    content: '';
+    background-image: url('../img/background.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.main::after {
+    content: '';
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
 }
 
 @media screen and (min-width: 768px) {
